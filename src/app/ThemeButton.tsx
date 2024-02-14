@@ -1,6 +1,8 @@
 'use client';
+
 import { Button } from '@/components/ui/button';
 import { useTheme } from 'next-themes';
+import React from 'react';
 
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme();
@@ -12,10 +14,10 @@ const ThemeButton = () => {
       setTheme('dark');
     }
   };
+
   return (
     <div>
-      The current theme is: {theme}
-      <Button onClick={toggle}>Change Color</Button>
+      <Button onClick={toggle}>토글</Button>
     </div>
   );
 };
